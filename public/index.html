@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Club App</title>
+    <link rel="icon" href="image/FunClub Bot.png" type="image/icon type">
+
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='css/welcome.css'>
+</head>
+
+<body>
+    <aside class="left-aside" id="left-modal">
+
+        <h2>How it work's</h2>
+        <div class="custom-scrollbar instruction">
+            <ol>
+                <li>The first thing you’ll need to do is create a Facebook app since an app Id is required to implement
+                    login using Facebook. You can create a facebook app by going to https://developers.facebook.com.
+                    You’ll
+                    notice in the codepen nothing is displayed since I have not added a app Id. You’ll need to remember
+                    to
+                    replace this placeholder with your own Facebook app Id once you have created your Facebook app.</li>
+                <li>Next, we’ll implement login using Facebook. All we need to do is copy and paste the code provided to
+                    us
+                    by Facebook to create the Facebook social login and replace the placeholder with your own Facebook
+                    app
+                    id. I will be explaining the same code with my customization provided in the codepen below.</li>
+                <li>Log In and look at the console output. You’ll now see some basic info including id, email,
+                    first_name,
+                    gender, last_name, link, locale, name, timezone, updated_time, verified</li>
+                <li>Now if you save this page as index.html and open it in a browser you should see the Facebook Login
+                    button. You can use the code provided by facebook at the link listed above or you can used the
+                    codepen
+                    code that I have altered to make it a bit shorter for explanation.</li>
+                <li>As you can see, the above function receives a response variable and checks it's status. If it is
+                    connected it fetches the logged in users info and outputs this information in the console of your
+                    browser, that area is where you could build more onto this script to handle the data. You'll also
+                    notice
+                    the not_authorized status. When the login is not authorized, this function changed the html on your
+                    page
+                    to ask you to log in. But how does this function get used?</li>
+                <li>Next, you'll notice this section of code at the end of the JavaScript section. This code snippet
+                    loads
+                    the Facebook SDK JavaScript asynchronously. It also provides the JavaScript library which is used to
+                    render your Facebook login interface.</li>
+                <li>As you can see, the above function receives a response variable and checks it's status. If it is
+                    connected it fetches the logged in users info and outputs this information in the console of your
+                    browser, that area is where you could build more onto this script to handle the data.</li>
+            </ol>
+        </div>
+        </p>
+
+
+    </aside>
+    <main>
+
+        <div class="heading">
+            <!-- <img src="image/logo.png">-->
+            <h1 class="heading-text">Welcome to the Fun club</h1>
+            <!--  <img class="right-img" src="image/logo.png">-->
+
+        </div>
+
+        <div class="card">
+            <div class="login-page">
+                <div class="form">
+                    <form action="chat.html" class="login-form">
+                        <input type="text" required name="username" placeholder="Enter your character name" />
+                        <input type="radio" required id="room" name="room" value="General-Room">
+                        <label for="">General-Room</label><br>
+                        <input type="radio" required id="room" name="room" value="Bollywood-Room">
+                        <label for="">Bollywood-Room</label><br>
+                        <input type="radio" required id="room" name="room" value="Cartoon-Room">
+                        <label for="other">Cartoon-Room</label>
+                        <button>Join</button>
+
+                    </form>
+                </div>
+            </div>
+            <button type="button" id="modal-btn-h" onclick="toggleModal()" class="modal-btn-h">How it
+                work's</button>
+            <button type="button" id="modal-btn-s" onclick="toggleModal2()" class="modal-btn-s">search for
+                character..</button>
+
+            <header>
+                &copy; Develop and Design by Aman Kayare
+            </header>
+        </div>
+
+    </main>
+
+    <aside class="right-aside" id="right-modal">
+        <section class="search-area">
+            <input type="text" autocomplete="off" id="myInput" onkeyup="myFunction()"
+                placeholder="Search for character..">
+            <div class="celebrity-available custom-scrollbar">
+
+                <table id="myTable">
+
+                    <tr>
+                        <td><img class="avatar-img" src="image/Virat Kohli.png   " alt="Avatar"></td>
+                        <td>
+                            <p id="celeb-name-1">Virat Kohli</p>
+                        </td>
+                        <td><button id="btn1" onclick="copy_function('celeb-name-1','btn1')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/AB Devilliar.png   " alt="Avatar"></td>
+                        <td>
+                            <p id="celeb-name-2">AB Devilliar</p>
+                        </td>
+                        <td><button id="btn2" onclick="copy_function('celeb-name-2','btn2')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Shikhar Dhawan.png" alt="Avatar"></td>
+                        <td>
+                            <p id="celeb-name-3">Shikhar Dhawan</p>
+                        </td>
+                        <td><button id="btn3" onclick="copy_function('celeb-name-3','btn3')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Rohit Sharma.png   " alt="Avatar"></td>
+                        <td>
+                            <p id="celeb-name-4">Rohit Sharma</p>
+                        </td>
+                        <td><button id="btn4" onclick="copy_function('celeb-name-4','btn4')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/MS Dhoni.png   " alt="Avatar"></td>
+                        <td>
+                            <p id="celeb-name-5">MS Dhoni</p>
+                        </td>
+                        <td><button id="btn5" onclick="copy_function('celeb-name-5','btn5')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Suresh Raina.png" alt="Avatar"></td>
+                        <td>
+                            <p id="celeb-name-6">Suresh Raina</p>
+                        </td>
+                        <td><button id="btn6" onclick="copy_function('celeb-name-6','btn6')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Irfan Khan.png   " alt="Avatar"></td>
+                        <td>
+                            <p id="celeb-name-7">Irfan Khan</p>
+                        </td>
+                        <td><button id="btn7" onclick="copy_function('celeb-name-7','btn7')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Venom.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-8">
+                            Venom
+                        </td>
+
+                        <td><button id="btn8" onclick="copy_function('celeb-name-8','btn8')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Narendra Modi.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-9">
+                            Narendra Modi
+                        <td><button id="btn9" onclick="copy_function('celeb-name-9','btn9')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Yogi Adityanath.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-10">
+                            Yogi Adityanath
+                        <td><button id="btn10" onclick="copy_function('celeb-name-10','btn10')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Amitabh Bachchan.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-11">
+                            Amitabh Bachchan
+                        <td><button id="btn11" onclick="copy_function('celeb-name-11','btn11')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/RajniKant.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-12">
+                            RajniKant
+                        <td><button id="btn12" onclick="copy_function('celeb-name-12','btn12')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Mr India.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-13">
+                            Mr India
+                        <td><button id="btn13" onclick="copy_function('celeb-name-13','btn13')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Kabir Singh.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-14">
+                            Kabir Singh
+                        <td><button id="btn14" onclick="copy_function('celeb-name-14','btn14')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Hritik Roshan.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-15">
+                            Hritik Roshan
+                        <td><button id="btn15" onclick="copy_function('celeb-name-15','btn15')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Iron Man.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-16">
+                            Iron Man
+                        <td><button id="btn16" onclick="copy_function('celeb-name-16','btn16')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Gajni.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-17">
+                            Gajni
+                        <td><button id="btn17" onclick="copy_function('celeb-name-17','btn17')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Mogembo.png " alt="Avatar"></td>
+
+                        <td id="celeb-name-18">
+                            Mogembo
+                        <td><button id="btn18" onclick="copy_function('celeb-name-18','btn18')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Oggy.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-19">
+                            Oggy
+                        <td><button id="btn19" onclick="copy_function('celeb-name-19','btn19')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Pikachu.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-20">
+                            Pikachu
+                        <td><button id="btn20" onclick="copy_function('celeb-name-20','btn20')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Minion.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-21">
+                            Minion
+                        <td><button id="btn21" onclick="copy_function('celeb-name-21','btn21')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Shizuka.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-22">
+                            Shizuka
+                        <td><button id="btn22" onclick="copy_function('celeb-name-22','btn22')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/BB Ki Vine.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-23">
+                            BB Ki Vine
+                        <td><button id="btn23" onclick="copy_function('celeb-name-23','btn23')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Carry Minati.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-24">
+                            Carry Minati
+                        <td><button id="btn24" onclick="copy_function('celeb-name-24','btn24')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Ben 10.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-25">
+                            Ben 10
+                        <td><button id="btn25" onclick="copy_function('celeb-name-25','btn25')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/ShinChan.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-26">
+                            ShinChan
+                        <td><button id="btn26" onclick="copy_function('celeb-name-26','btn26')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Jonny Bravo.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-27">
+                            Jonny Bravo
+                        <td><button id="btn27" onclick="copy_function('celeb-name-27','btn27')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Sunny Leone.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-28">
+                            Sunny Leone
+                        <td><button id="btn28" onclick="copy_function('celeb-name-28','btn28')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Technical Guruji.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-29">
+                            Technical Guruji
+                        <td><button id="btn29" onclick="copy_function('celeb-name-29','btn29')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Nobita.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-30">
+                            Nobita
+                        <td><button id="btn30" onclick="copy_function('celeb-name-30','btn30')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Dr Strange.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-31">
+                            Dr Strange
+                        <td><button id="btn31" onclick="copy_function('celeb-name-31','btn31')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Anushka Sharma.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-32">
+                            Anushka Sharma
+                        <td><button id="btn32" onclick="copy_function('celeb-name-32','btn32')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Surgical Striker.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-33">
+                            Surgical Striker
+                        <td><button id="btn33" onclick="copy_function('celeb-name-33','btn33')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Ashish Chanchlani.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-34">
+                            Ashish Chanchlani
+                        <td><button id="btn34" onclick="copy_function('celeb-name-34','btn34')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Chota Bheem.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-35">
+                            Chota Bheem
+                        <td><button id="btn35" onclick="copy_function('celeb-name-35','btn35')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Captian America.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-36">
+                            Captian America
+                        <td><button id="btn36" onclick="copy_function('celeb-name-36','btn36')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Disha Patani.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-37">
+                            Disha Patani
+                        <td><button id="btn37" onclick="copy_function('celeb-name-37','btn37')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Vicky Donor.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-38">
+                            Vicky Donor
+                        <td><button id="btn38" onclick="copy_function('celeb-name-38','btn38')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Doremon.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-39">
+                            Doremon
+                        <td><button id="btn39" onclick="copy_function('celeb-name-39','btn39')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Captian Marvel.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-40">
+                            Captian Marvel
+                        <td><button id="btn40" onclick="copy_function('celeb-name-40','btn40')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Rahul Gandhi.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-41">
+                            Rahul Gandhi
+                        <td><button id="btn41" onclick="copy_function('celeb-name-41','btn41')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Spiderman.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-42">
+                            Spiderman
+                        <td><button id="btn42" onclick="copy_function('celeb-name-42','btn42')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Ronaldo.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-43">
+                            Ronaldo
+                        <td><button id="btn43" onclick="copy_function('celeb-name-43','btn43')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Messi.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-44">
+                            Messi
+                        <td><button id="btn44" onclick="copy_function('celeb-name-44','btn44')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Goku.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-45">
+                            Goku
+                        <td><button id="btn45" onclick="copy_function('celeb-name-45','btn45')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                    <tr>
+                        <td><img class="avatar-img" src="image/Shaktimaan.png" alt="Avatar"></td>
+
+                        <td id="celeb-name-46">
+                            Shaktimaan
+                        <td><button id="btn46" onclick="copy_function('celeb-name-46','btn46')" class="copy-button">Copy
+                                Name</button></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+    </aside>
+    <div class="modal">
+        <div class="modal-content" id="content">
+            <span class="close-button">&times;</span>
+        </div>
+    </div>
+    <div class="modal2">
+        <div class="modal-content2" id="content2">
+            <span class="close-button2">&times;</span>
+        </div>
+    </div>
+</body>
+<script src='js/view.js'></script>
+
+
+</html>

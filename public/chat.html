@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="image/FunClub Bot.png" type="image/icon type">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/chat.css">
+  <title>Chat Room</title>
+</head>
+
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()"> <img src="image/FunClub Bot.png"></span>
+      <h1>Fun Club</h1>
+      <a href="index.html" class="btn">Leave Room</a>
+    </header>
+    <main class="chat-main" id="main">
+      <div class="chat-sidebar custom-scrollbar sidenav" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h3><i class="fas fa-comments"></i> Room Name:</h3>
+        <h2 id="room-name"></h2>
+        <h3><i class="fas fa-users"></i> Online
+        </h3>
+        <table id="online-table" class="online-table">
+          <!--
+          <tr>
+            <td><img class="avatar-img" src="image/virat.png   " alt="Avatar"></td>
+            <td>
+              <p id="celeb-name-1">Virat Kohli</p>
+            </td>
+          </tr>
+       -->
+
+        </table>
+
+      </div>
+      <div class="chat-messages custom-scrollbar" id="scroll">
+        <button onclick="ButtomFunction()" id="myBtn" title="Go to bottom">V</button>
+        <!-- <div class="message">
+        
+          <img src="image/FunClub Bot.png">
+           <p class="meta">Alia Bhatt <span>9:12pm</span></p>
+           <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+            repudiandae.
+          </p>
+         
+        </div>
+         -->
+      </div>
+
+    </main>
+    <div class="chat-form-container">
+      <form id="chat-form">
+        <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
+        <button class="btn"><i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"
+  integrity="sha256-ijqLssetA1NMNjZ+w1zaUafQQLm4IW5OoM8O+4tatME=" crossorigin="anonymous"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/main.js"></script>
+<script src="js/chat.js"></script>
+
+
+</html>

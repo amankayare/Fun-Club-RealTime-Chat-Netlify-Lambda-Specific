@@ -1,0 +1,4 @@
+//write css for right aside i.e. search for mobile screen and js part is done only css is left
+
+
+
