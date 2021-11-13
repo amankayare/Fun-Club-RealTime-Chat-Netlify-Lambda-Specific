@@ -2,7 +2,6 @@
 # Fun-Club-RealTime-Chat
 
 This project is built using nodejs along with socket.io package
-https://fun-club-realtime-chat.herokuapp.com/index.html
 
 ## Run Locally
 Install Fun-Club-RealTime-Chat with npm
