@@ -41,7 +41,7 @@ in the URL and hit enter.
 
 ## How it work's
 
-This project is a real time chat application thru which muliple users can communicate 
+This project is a real time chat application thru which multiple users can communicate 
 over different channels known as rooms, no need to login with your credentials instead 
 you can search and choose your character from the right panel of the welcome page.
 
