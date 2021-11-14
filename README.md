@@ -49,12 +49,11 @@ Simply copy the name of your character and paste it into the given input field,t
 you could select your room from the given choices.
 
 You can also put your name in the character name field but in this case profile pic
-would be the default one and you are not anonymous anymore.
+would be the default one and you will be not anonymous anymore.
 
 In same way other users can join you in the same room and you guys can have fun with
 your anonymous identity. 
 
-Note : Across the rooms communication is not possible unless you join the same room.
 ## References
 
  - [NodeJS](https://nodejs.org/en/)
